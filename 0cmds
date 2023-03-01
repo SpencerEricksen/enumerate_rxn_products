@@ -1,0 +1,10 @@
+# activate cheminformatics python env
+conda activate py38_chem
+
+# clean up aldehydes CSV file
+python ./source/rdkit_clean_smilesCSV.py ./data/aldehyde_reactants.csv
+
+# run product enumeration
+python source/rdkit_enumerate_acylhydrazones_v1.3.py ./data/aldehyde_reactants_cln.csv acylhydrazone_products_all.csv
+
+
